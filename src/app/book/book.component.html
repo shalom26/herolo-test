@@ -1,3 +1,17 @@
-<p>
-  book works!
-</p>
+  <tr class="book-details">
+    <td class="item plus " (click)="openDetails()">
+      <span *ngIf="!isOpen">+</span>
+      <span *ngIf="isOpen">-</span>
+    </td>
+    <td class="item title"><a [href]="book.website" target="_blank">{{book.title |toLowerCase | capitalize}}</a></td>
+    <td class="item">{{book.author}}</td>
+    <td class="item">{{book.date}}</td>
+    <td class="item"><button md-button  [color]="'primary'" (click)="editBook()">Edit</button></td>
+    <td class="item"><button md-button  [color]="'warn'" (click)="deleteBook()">Delete</button></td>
+  </tr>
+  <div class="description-container" *ngIf="isOpen">
+    <img class="book-image"[src]="book.image" alt="">
+    <div>{{book.description}}</div>
+  </div>
+
+

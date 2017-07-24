@@ -1,20 +1,43 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from "@angular/platform-browser";
+import {NgModule} from "@angular/core";
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import {AppComponent} from "./app.component";
+import {BookComponent} from "./book/book.component";
+import {BooksTableComponent} from "./books-table/books-table.component";
+import {BookServiceService} from "app/services/book-service.service";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MdButtonModule, MdCheckboxModule, MdTableModule} from "@angular/material";
+import {CapitalizePipe} from "./pipes/caps.pipe";
+import {ToLowerCasePipe} from "./pipes/to-lower-case.pipe";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {EditBookComponent} from "./edit-book/edit-book.component";
+import {DeleteBookComponent} from './delete-book/delete-book.component';
 
-import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookComponent,
+    BooksTableComponent,
+    CapitalizePipe,
+    ToLowerCasePipe,
+    EditBookComponent,
+    DeleteBookComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdTableModule,
+    NgbModule.forRoot(),
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [BookServiceService],
+  bootstrap: [AppComponent],
+  entryComponents: [EditBookComponent, DeleteBookComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

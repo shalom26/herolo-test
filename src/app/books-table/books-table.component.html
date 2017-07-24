@@ -1,3 +1,22 @@
-<p>
-  books-table works!
-</p>
+<div class="main-container">
+  <div class="logo"><img src="http://static1.squarespace.com/static/53ff7efae4b0502a327e975a/t/53ff8053e4b0f2e23ae9c2d3/1500512372993/?format=300w" alt="logo"></div>
+  <table class="table">
+    <thead>
+    <tr class="headers">
+      <th>Details</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr app-book *ngFor="let book of books" [book]="book"></tr>
+    </tbody>
+  </table>
+
+  <button md-fab class="add-btn" (click)="addBook()">
+    <md-icon>+</md-icon>
+  </button>
+</div>

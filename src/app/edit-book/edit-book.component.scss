@@ -1,0 +1,28 @@
+.form-container{
+  display: flex;
+  padding: 20px;
+  height: 400px;
+  justify-content: center;
+  .field-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .field {
+      display: flex;
+      align-items: center;
+      label{
+        width: 150px;
+      }
+      input{
+        width: 300px;
+        border-radius: 0;
+      }
+    }
+    .err-msg {
+      margin-right: 175px;
+      align-self: flex-end;
+      color: #F06292;
+      font-size: 13px;
+    }
+  }
+}
