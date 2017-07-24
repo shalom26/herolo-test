@@ -60,7 +60,7 @@
 
       </div>
       <div class="modal-footer">
-        <button  class="md-btn" type="submit" (click)="activeModal.close()">Save</button>
+        <button  class="md-btn" type="submit" [disabled]="formGroup.invalid">Save</button>
       </div>
     </form>
   </div>

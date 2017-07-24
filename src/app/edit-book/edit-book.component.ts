@@ -31,6 +31,7 @@ export class EditBookComponent implements OnInit {
   }
 
   addEditBook(value) {
+    console.log('edeit');
     if (this.type === 'edit') {
       console.log('edit book', value);
       let newBook = Object.assign({}, this.book, value);
@@ -38,6 +39,7 @@ export class EditBookComponent implements OnInit {
     } else {
       this.bookService.addBook(value);
     }
+    this.activeModal.close();
   }
 
 }
