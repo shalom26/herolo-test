@@ -13,6 +13,7 @@ import {ToLowerCasePipe} from "./pipes/to-lower-case.pipe";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {EditBookComponent} from "./edit-book/edit-book.component";
 import {DeleteBookComponent} from './delete-book/delete-book.component';
+import {SpecialCharsPipe} from "./pipes/special-chars.pipe";
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {DeleteBookComponent} from './delete-book/delete-book.component';
     BooksTableComponent,
     CapitalizePipe,
     ToLowerCasePipe,
+    SpecialCharsPipe,
     EditBookComponent,
     DeleteBookComponent
   ],

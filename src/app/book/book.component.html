@@ -3,7 +3,7 @@
       <span *ngIf="!isOpen">+</span>
       <span *ngIf="isOpen">-</span>
     </td>
-    <td class="item title"><a [href]="book.website" target="_blank">{{book.title |toLowerCase | capitalize}}</a></td>
+    <td class="item title"><a [href]="book.website" target="_blank">{{book.title |removeSpecialChars | toLowerCase | capitalize}}</a></td>
     <td class="item">{{book.author}}</td>
     <td class="item">{{book.date}}</td>
     <td class="item"><button md-button  [color]="'primary'" (click)="editBook()">Edit</button></td>
